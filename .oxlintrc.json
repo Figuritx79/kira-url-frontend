@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/oxlintrc.json",
+  "rules": {
+    "no-unused-vars": "off"
+  },
+  "ignorePatterns": [
+    "node_modules/**",
+    ".pnpm-store/**",
+    ".agents/**",
+    "dist/**"
+  ]
+}
