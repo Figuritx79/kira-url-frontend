@@ -26,7 +26,9 @@ const isExpanded = ref(false)
             class="pl-11 h-12 text-base focus:outline-1 focus:outline-primary rounded-md"
           />
         </div>
-        <Button type="submit" class="h-12 px-6"> Acortar </Button>
+        <Button type="submit" class="h-12 px-6 bg-primary rounded-2xl dark:text-black text-white">
+          Acortar
+        </Button>
       </div>
 
       <button
