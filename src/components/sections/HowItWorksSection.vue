@@ -24,7 +24,7 @@ const steps = [
 </script>
 
 <template>
-  <section class="w-full py-24 px-4">
+  <section id="how-it-works" class="w-full py-24 px-4">
     <div class="mx-auto max-w-4xl">
       <div class="text-center mb-16 animate-fade-up">
         <h2 class="text-3xl font-bold tracking-tight mb-3">
@@ -39,7 +39,7 @@ const steps = [
         <div
           v-for="(step, index) in steps"
           :key="step.number"
-          class="relative bg-card shadow-sm dark:border dark:border-border rounded-xl p-8 flex flex-col items-center text-center gap-5 animate-fade-up"
+          class="relative bg-card shadow-sm dark:border dark:border-border rounded-xl p-8 flex flex-col items-center text-center gap-5 animate-fade-up hover:shadow-md hover:-translate-y-1 transition-all duration-300"
           :class="`delay-${(index + 1) * 100}`"
         >
           <div class="absolute -top-3 -left-3 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold">

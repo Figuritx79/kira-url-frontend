@@ -21,7 +21,7 @@ const features = [
 </script>
 
 <template>
-  <section class="w-full py-16 px-4">
+  <section id="features" class="w-full py-16 px-4">
     <div class="mx-auto max-w-5xl">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold tracking-tight mb-4">

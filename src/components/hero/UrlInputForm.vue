@@ -8,11 +8,26 @@ import { Link2, ChevronDown, ChevronUp } from 'lucide-vue-next'
 const url = ref('')
 const customSlug = ref('')
 const isExpanded = ref(false)
+const error = ref('')
+
+function handleSubmit() {
+  const trimmed = url.value.trim()
+  if (!trimmed) {
+    error.value = 'Por favor ingresa una URL'
+    return
+  }
+  try {
+    new URL(trimmed)
+    error.value = ''
+  } catch {
+    error.value = 'URL inválida'
+  }
+}
 </script>
 
 <template>
   <div class="w-full max-w-xl mx-auto">
-    <form @submit.prevent class="flex flex-col gap-4">
+    <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
       <div class="flex gap-3">
         <div class="relative flex-1">
           <Link2
@@ -30,6 +45,7 @@ const isExpanded = ref(false)
           Acortar
         </Button>
       </div>
+      <p v-if="error" class="text-sm text-destructive -mt-2 pl-1">{{ error }}</p>
 
       <button
         type="button"
