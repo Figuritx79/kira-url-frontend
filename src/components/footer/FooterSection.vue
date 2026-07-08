@@ -6,8 +6,8 @@ import { Heart, Github } from 'lucide-vue-next'
   <footer class="w-full border-t border-border/40 py-8 px-4">
     <div class="mx-auto max-w-4xl flex items-center justify-between">
       <div class="flex items-center gap-2 animate-fade-up">
-        <img src="/kira-url-logo.png" alt="Kira URL" class="size-5" />
-        <span class="text-sm text-muted-foreground">kira-url © {{ new Date().getFullYear()}}</span>
+        <img src="/kira-url-favicon.ico" alt="Kira URL" class="size-5" />
+        <span class="text-sm text-muted-foreground">kira-url © {{ new Date().getFullYear() }}</span>
       </div>
 
       <div class="flex items-center gap-1 animate-fade-up delay-200">
