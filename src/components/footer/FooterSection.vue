@@ -7,7 +7,7 @@ import { Heart, Github } from 'lucide-vue-next'
     <div class="mx-auto max-w-4xl flex items-center justify-between">
       <div class="flex items-center gap-2 animate-fade-up">
         <img src="/kira-url-logo.png" alt="Kira URL" class="size-5" />
-        <span class="text-sm text-muted-foreground">kira-url © 2026</span>
+        <span class="text-sm text-muted-foreground">kira-url © {{ new Date().getFullYear()}}</span>
       </div>
 
       <div class="flex items-center gap-1 animate-fade-up delay-200">

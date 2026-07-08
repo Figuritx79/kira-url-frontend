@@ -37,7 +37,7 @@ function handleSubmit() {
           <Input
             v-model="url"
             type="url"
-            placeholder="https://tu-url-larga-aqui.com/pagina/ejemplo"
+            placeholder="https://tu-url-larga-aqui.com"
             class="pl-11 h-12 text-base focus:outline-1 focus:outline-primary rounded-md"
           />
         </div>
@@ -60,14 +60,14 @@ function handleSubmit() {
         />
       </button>
 
-      <div v-if="isExpanded" class="flex items-center gap-3 pl-1 animate-fade-up">
-        <span class="text-sm text-muted-foreground shrink-0 font-mono">kira-url.com/</span>
+      <div v-if="isExpanded" class="flex items-center gap-0.5 animate-fade-up">
+        <span class="text-sm text-muted-foreground shrink-0 font-mono">kira-url.link/</span>
         <Input
           id="slug"
           v-model="customSlug"
           type="text"
           placeholder="mi-slug"
-          class="h-10 font-mono focus:outline-0 focus:ring-1 focus:ring-primary rounded-md"
+          class="h-8 font-mono focus:outline-0 focus:ring-1 focus:ring-primary rounded-md w-28"
         />
       </div>
     </form>
