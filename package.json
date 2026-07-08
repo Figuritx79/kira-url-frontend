@@ -15,6 +15,7 @@
     "format": "oxfmt src/"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^11.2.4",
     "@tailwindcss/vite": "^4.3.0",
     "@vueuse/core": "^14.3.0",
     "class-variance-authority": "^0.7.1",
@@ -26,6 +27,7 @@
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.3.0",
     "vue": "^3.5.32",
+    "vue-i18n": "^11.4.6",
     "vue-router": "^5.0.4"
   },
   "devDependencies": {
