@@ -27,12 +27,8 @@ const steps = [
   <section id="how-it-works" class="w-full py-24 px-4">
     <div class="mx-auto max-w-4xl">
       <div class="text-center mb-16 animate-fade-up">
-        <h2 class="text-3xl font-bold tracking-tight mb-3">
-          Cómo funciona
-        </h2>
-        <p class="text-muted-foreground">
-          Tres pasos simples para acortar tu URL
-        </p>
+        <h2 class="text-3xl font-bold tracking-tight mb-3">Cómo funciona</h2>
+        <p class="text-muted-foreground">Tres pasos simples para acortar tu URL</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -42,7 +38,9 @@ const steps = [
           class="relative bg-card shadow-sm dark:border dark:border-border rounded-xl p-8 flex flex-col items-center text-center gap-5 animate-fade-up hover:shadow-md hover:-translate-y-1 transition-all duration-300"
           :class="`delay-${(index + 1) * 100}`"
         >
-          <div class="absolute -top-3 -left-3 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold">
+          <div
+            class="absolute -top-3 -left-3 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold"
+          >
             {{ step.number }}
           </div>
           <div class="w-14 h-14 rounded-xl bg-accent flex items-center justify-center">

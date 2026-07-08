@@ -37,16 +37,18 @@ onMounted(() => {
 
 <template>
   <section class="relative w-full py-16 px-4 flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-primary/[0.03] to-transparent pointer-events-none"></div>
-    <div class="mx-auto max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-primary/[0.03] to-transparent pointer-events-none"
+    ></div>
+    <div
+      class="mx-auto max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+    >
       <div class="flex flex-col gap-8 order-2 lg:order-1">
         <div ref="titleRef" class="space-y-4">
           <h1 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
             Confía en tu pequeño amigo
           </h1>
-          <p class="text-muted-foreground text-lg">
-            Acorta tus URLs de forma sencilla y rápida
-          </p>
+          <p class="text-muted-foreground text-lg">Acorta tus URLs de forma sencilla y rápida</p>
         </div>
 
         <div ref="formRef">
