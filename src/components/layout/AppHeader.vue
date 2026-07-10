@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ThemeToggle from '@/components/theme/ThemeToggle.vue'
+import LanguageSwitcher from '@/components/language/LanguageSwitcher.vue'
 import { useI18n } from 'vue-i18n'
 // t means translate
 const { t } = useI18n()
@@ -25,7 +26,10 @@ const { t } = useI18n()
         </a>
       </nav>
 
-      <ThemeToggle />
+      <div class="flex items-center gap-1">
+        <LanguageSwitcher />
+        <ThemeToggle />
+      </div>
     </div>
   </header>
 </template>

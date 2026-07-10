@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How it works",
+    "features": "Features"
+  },
+  "hero": {
+    "title": "Trust your little friend",
+    "subtitle": "Shorten your URLs easily and quickly",
+    "placeholder": "http://your-long-url.com",
+    "button": "Shorten",
+    "customText": "Use custom text"
+  },
+  "form": {
+    "url": "https://your-long-url-here.com",
+    "slug": "my-slug",
+    "emptyError": "Please enter a URL",
+    "invalidError": "Invalid URL"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "Three simple steps to shorten your URL",
+    "steps": {
+      "paste": {
+        "title": "Paste your URL",
+        "description": "Copy the long URL you want to shorten and paste it in the field."
+      },
+      "shorten": {
+        "title": "Kira shortens it",
+        "description": "Our little friend creates a short and memorable link."
+      },
+      "share": {
+        "title": "Share it",
+        "description": "Copy your new URL and share it wherever you want."
+      }
+    }
+  },
+  "features": {
+    "title": "Why choose us?",
+    "subtitle": "Your little friend is always ready to help you",
+    "items": {
+      "fast": {
+        "title": "Fast",
+        "description": "Shorten your URLs in seconds. No complications."
+      },
+      "secure": {
+        "title": "Secure",
+        "description": "Your links are protected and available whenever you need them."
+      },
+      "reliable": {
+        "title": "Reliable",
+        "description": "Trust your little friend to shorten your URL."
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "and": "and"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  }
+}

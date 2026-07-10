@@ -1,3 +1,4 @@
+// This is a way to load diferents langs but i prefer to use .json files
 export const messages = {
   en: {
     nav: {

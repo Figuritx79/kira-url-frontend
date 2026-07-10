@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "howItWorks": "Cómo funciona",
+    "features": "Características"
+  },
+  "hero": {
+    "title": "Confía en tu pequeño amigo",
+    "subtitle": "Acorta tus URLs de forma sencilla y rápida",
+    "placeholder": "http://tu-url-larga.com",
+    "button": "Acortar",
+    "customText": "Usar texto personalizado"
+  },
+  "form": {
+    "url": "https://tu-url-larga-aqui.com",
+    "slug": "mi-slug",
+    "emptyError": "Por favor ingresa una URL",
+    "invalidError": "URL inválida"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "Tres pasos simples para acortar tu URL",
+    "steps": {
+      "paste": {
+        "title": "Pega tu URL",
+        "description": "Copia la URL larga que quieres acortar y pégala en el campo."
+      },
+      "shorten": {
+        "title": "Kira la acorta",
+        "description": "Nuestra pequeña amiga crea un enlace corto y memorable."
+      },
+      "share": {
+        "title": "Compártelo",
+        "description": "Copia tu nueva URL y compártela donde quieras."
+      }
+    }
+  },
+  "features": {
+    "title": "¿Por qué elegirnos?",
+    "subtitle": "Tu pequeño amigo siempre está listo para ayudarte",
+    "items": {
+      "fast": {
+        "title": "Rápido",
+        "description": "Acorta tus URLs en segundos. Sin complicaciones."
+      },
+      "secure": {
+        "title": "Seguro",
+        "description": "Tus enlaces están protegidos y disponibles cuando los necesites."
+      },
+      "reliable": {
+        "title": "Confiable",
+        "description": "Confía en tu pequeño amigo para acortar tu URL."
+      }
+    }
+  },
+  "footer": {
+    "madeWith": "Hecho con",
+    "and": "y"
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro",
+    "switchToLight": "Cambiar a modo claro",
+    "switchToDark": "Cambiar a modo oscuro"
+  }
+}

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { Link, ShieldCheck, Zap } from 'lucide-vue-next'
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-const features = [
+const features = computed(() => [
   {
     icon: Zap,
     title: t('features.items.fast.title'),
@@ -19,7 +20,7 @@ const features = [
     title: t('features.items.reliable.title'),
     description: t('features.items.reliable.description'),
   },
-]
+])
 </script>
 
 <template>

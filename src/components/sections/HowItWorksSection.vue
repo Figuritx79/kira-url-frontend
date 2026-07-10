@@ -1,27 +1,28 @@
 <script setup lang="ts">
 import { Link, MousePointerClick, Share2 } from 'lucide-vue-next'
-import { useI18n } from 'vue-i18n';
-const {t} = useI18n()
-const steps = [
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+const { t } = useI18n()
+const steps = computed(() => [
   {
     icon: MousePointerClick,
     number: '1',
-    title:t('howItWorks.steps.paste.title'),
-    description:t('howItWorks.steps.paste.description'),
+    title: t('howItWorks.steps.paste.title'),
+    description: t('howItWorks.steps.paste.description'),
   },
   {
     icon: Link,
     number: '2',
-    title:t('howItWorks.steps.shorten.title'),
-    description:t('howItWorks.steps.shorten.description'),
+    title: t('howItWorks.steps.shorten.title'),
+    description: t('howItWorks.steps.shorten.description'),
   },
   {
     icon: Share2,
     number: '3',
-    title:t('howItWorks.steps.share.title'),
-    description:t('howItWorks.steps.share.description'),
+    title: t('howItWorks.steps.share.title'),
+    description: t('howItWorks.steps.share.description'),
   },
-]
+])
 </script>
 
 <template>
@@ -29,11 +30,11 @@ const steps = [
     <div class="mx-auto max-w-4xl">
       <div class="text-center mb-16 animate-fade-up">
         <h2 class="text-3xl font-bold tracking-tight mb-3">
-          {{t('howItWorks.title')}}
+          {{ t('howItWorks.title') }}
           <!-- Cómo funciona -->
         </h2>
         <p class="text-muted-foreground">
-          {{t('howItWorks.subtitle')}}
+          {{ t('howItWorks.subtitle') }}
           <!-- Tres pasos simples para acortar tu URL -->
         </p>
       </div>
