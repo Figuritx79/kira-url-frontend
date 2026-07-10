@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Heart, Github } from 'lucide-vue-next'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -11,9 +14,12 @@ import { Heart, Github } from 'lucide-vue-next'
       </div>
 
       <div class="flex items-center gap-1 animate-fade-up delay-200">
-        <span class="text-sm text-muted-foreground">Hecho con</span>
+        <span class="text-sm text-muted-foreground">
+          {{ t('footer.madeWith') }}
+          <!-- Hecho con -->
+        </span>
         <Heart class="size-3 text-primary" data-icon="inline-end" />
-        <span class="text-sm text-muted-foreground">y Vue</span>
+        <span class="text-sm text-muted-foreground"> {{ t('footer.and') }} Vue </span>
       </div>
 
       <div class="animate-fade-up delay-300">

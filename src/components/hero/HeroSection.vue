@@ -3,11 +3,12 @@ import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import UrlInputForm from './UrlInputForm.vue'
 import KiraImagePlaceholder from './KiraImagePlaceholder.vue'
+import { useI18n } from 'vue-i18n'
 
 const titleRef = ref<HTMLDivElement>()
 const formRef = ref<HTMLDivElement>()
 const imageRef = ref<HTMLDivElement>()
-
+const { t } = useI18n()
 onMounted(() => {
   if (titleRef.value) {
     gsap.fromTo(
@@ -46,9 +47,13 @@ onMounted(() => {
       <div class="flex flex-col gap-8 order-2 lg:order-1">
         <div ref="titleRef" class="space-y-4">
           <h1 class="text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-            Confía en tu pequeño amigo
+            {{ t('hero.title') }}
+            <!-- Confía en tu pequeño amigo -->
           </h1>
-          <p class="text-muted-foreground text-lg">Acorta tus URLs de forma sencilla y rápida</p>
+          <p class="text-muted-foreground text-lg">
+            {{ t('hero.subtitle') }}
+            <!-- Acorta tus URLs de forma sencilla y rápida -->
+          </p>
         </div>
 
         <div ref="formRef">

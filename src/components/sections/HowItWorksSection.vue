@@ -1,24 +1,25 @@
 <script setup lang="ts">
 import { Link, MousePointerClick, Share2 } from 'lucide-vue-next'
-
+import { useI18n } from 'vue-i18n';
+const {t} = useI18n()
 const steps = [
   {
     icon: MousePointerClick,
     number: '1',
-    title: 'Pega tu URL',
-    description: 'Copia la URL larga que quieres acortar y pégala en el campo.',
+    title:t('howItWorks.steps.paste.title'),
+    description:t('howItWorks.steps.paste.description'),
   },
   {
     icon: Link,
     number: '2',
-    title: 'Kira la acorta',
-    description: 'Nuestra pequeña amiga crea un enlace corto y memorable.',
+    title:t('howItWorks.steps.shorten.title'),
+    description:t('howItWorks.steps.shorten.description'),
   },
   {
     icon: Share2,
     number: '3',
-    title: 'Compártelo',
-    description: 'Copia tu nueva URL y compártela donde quieras.',
+    title:t('howItWorks.steps.share.title'),
+    description:t('howItWorks.steps.share.description'),
   },
 ]
 </script>
@@ -27,8 +28,14 @@ const steps = [
   <section id="how-it-works" class="w-full py-24 px-4">
     <div class="mx-auto max-w-4xl">
       <div class="text-center mb-16 animate-fade-up">
-        <h2 class="text-3xl font-bold tracking-tight mb-3">Cómo funciona</h2>
-        <p class="text-muted-foreground">Tres pasos simples para acortar tu URL</p>
+        <h2 class="text-3xl font-bold tracking-tight mb-3">
+          {{t('howItWorks.title')}}
+          <!-- Cómo funciona -->
+        </h2>
+        <p class="text-muted-foreground">
+          {{t('howItWorks.subtitle')}}
+          <!-- Tres pasos simples para acortar tu URL -->
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

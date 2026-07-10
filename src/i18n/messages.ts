@@ -1,4 +1,4 @@
-export const message = {
+export const messages = {
   en: {
     nav: {
       home: 'Home',
@@ -24,8 +24,7 @@ export const message = {
       steps: {
         paste: {
           title: 'Paste your URL',
-          description:
-            'Copy the long URL you want to shorten and paste it in the field.',
+          description: 'Copy the long URL you want to shorten and paste it in the field.',
         },
         shorten: {
           title: 'Kira shortens it',
@@ -47,8 +46,7 @@ export const message = {
         },
         secure: {
           title: 'Secure',
-          description:
-            'Your links are protected and available whenever you need them.',
+          description: 'Your links are protected and available whenever you need them.',
         },
         reliable: {
           title: 'Reliable',
@@ -93,13 +91,11 @@ export const message = {
       steps: {
         paste: {
           title: 'Pega tu URL',
-          description:
-            'Copia la URL larga que quieres acortar y pégala en el campo.',
+          description: 'Copia la URL larga que quieres acortar y pégala en el campo.',
         },
         shorten: {
           title: 'Kira la acorta',
-          description:
-            'Nuestra pequeña amiga crea un enlace corto y memorable.',
+          description: 'Nuestra pequeña amiga crea un enlace corto y memorable.',
         },
         share: {
           title: 'Compártelo',
@@ -117,8 +113,7 @@ export const message = {
         },
         secure: {
           title: 'Seguro',
-          description:
-            'Tus enlaces están protegidos y disponibles cuando los necesites.',
+          description: 'Tus enlaces están protegidos y disponibles cuando los necesites.',
         },
         reliable: {
           title: 'Confiable',

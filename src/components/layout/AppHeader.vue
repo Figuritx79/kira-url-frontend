@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import ThemeToggle from '@/components/theme/ThemeToggle.vue'
+import { useI18n } from 'vue-i18n'
+// t means translate
+const { t } = useI18n()
 </script>
 
 <template>
@@ -11,9 +14,15 @@ import ThemeToggle from '@/components/theme/ThemeToggle.vue'
       </a>
 
       <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-        <a href="#" class="hover:text-foreground transition-colors">Inicio</a>
-        <a href="#how-it-works" class="hover:text-foreground transition-colors">Cómo funciona</a>
-        <a href="#features" class="hover:text-foreground transition-colors">Características</a>
+        <a href="#" class="hover:text-foreground transition-colors">
+          {{ t('nav.home') }}
+        </a>
+        <a href="#how-it-works" class="hover:text-foreground transition-colors">
+          {{ t('nav.howItWorks') }}
+        </a>
+        <a href="#features" class="hover:text-foreground transition-colors">
+          {{ t('nav.features') }}
+        </a>
       </nav>
 
       <ThemeToggle />

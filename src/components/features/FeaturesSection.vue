@@ -1,21 +1,23 @@
 <script setup lang="ts">
 import { Link, ShieldCheck, Zap } from 'lucide-vue-next'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const features = [
   {
     icon: Zap,
-    title: 'Rápido',
-    description: 'Acorta tus URLs en segundos. Sin complicaciones.',
+    title: t('features.items.fast.title'),
+    description: t('features.items.fast.description'),
   },
   {
     icon: ShieldCheck,
-    title: 'Seguro',
-    description: 'Tus enlaces están protegidos y disponibles cuando los necesites.',
+    title: t('features.items.secure.title'),
+    description: t('features.items.secure.description'),
   },
   {
     icon: Link,
-    title: 'Confiable',
-    description: 'Confía en tu pequeño amigo para acortar tu URL.',
+    title: t('features.items.reliable.title'),
+    description: t('features.items.reliable.description'),
   },
 ]
 </script>
@@ -24,9 +26,13 @@ const features = [
   <section id="features" class="w-full py-16 px-4">
     <div class="mx-auto max-w-5xl">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold tracking-tight mb-4">¿Por qué elegirnos?</h2>
+        <h2 class="text-3xl font-bold tracking-tight mb-4">
+          {{ t('features.title') }}
+          <!-- ¿Por qué elegirnos? -->
+        </h2>
         <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Tu pequeño amigo siempre está listo para ayudarte
+          {{ t('features.subtitle') }}
+          <!-- Tu pequeño amigo siempre está listo para ayudarte -->
         </p>
       </div>
 

@@ -4,12 +4,13 @@
 // - Backend: Conectar POST /api/shorten, validar disponibilidad slug, guardar URL
 import { ref } from 'vue'
 import { Link2, ChevronDown, ChevronUp } from 'lucide-vue-next'
+import { useI18n } from 'vue-i18n'
 
 const url = ref('')
 const customSlug = ref('')
 const isExpanded = ref(false)
 const error = ref('')
-
+const { t } = useI18n()
 function handleSubmit() {
   const trimmed = url.value.trim()
   if (!trimmed) {
@@ -37,12 +38,13 @@ function handleSubmit() {
           <Input
             v-model="url"
             type="url"
-            placeholder="https://tu-url-larga-aqui.com"
+            :placeholder="t('hero.placeholder')"
             class="pl-11 h-12 text-base focus:outline-1 focus:outline-primary rounded-md"
           />
         </div>
         <Button type="submit" class="h-12 px-6 bg-primary rounded-2xl dark:text-black text-white">
-          Acortar
+          {{ t('hero.button') }}
+          <!-- Acortar -->
         </Button>
       </div>
       <p v-if="error" class="text-sm text-destructive -mt-2 pl-1">{{ error }}</p>
@@ -52,7 +54,10 @@ function handleSubmit() {
         class="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors self-start pl-1"
         @click="isExpanded = !isExpanded"
       >
-        <span>Usar texto personalizado</span>
+        <span>
+          {{ t('hero.customText') }}
+          <!-- Usar texto personalizado -->
+        </span>
         <component
           :is="isExpanded ? ChevronUp : ChevronDown"
           class="size-4"
@@ -66,7 +71,7 @@ function handleSubmit() {
           id="slug"
           v-model="customSlug"
           type="text"
-          placeholder="mi-slug"
+          :placeholder="t('form.slug')"
           class="h-8 font-mono focus:outline-0 focus:ring-1 focus:ring-primary rounded-md w-28"
         />
       </div>
