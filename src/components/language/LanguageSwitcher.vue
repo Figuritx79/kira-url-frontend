@@ -2,11 +2,10 @@
 import { Globe } from 'lucide-vue-next'
 import I18nManager from '@/i18n/manager'
 import { useI18n } from 'vue-i18n'
-import { watch } from 'vue'
 const { locale } = useI18n({ useScope: 'global' })
 const suportLocale = I18nManager.supportedLocales.filter(Boolean) as string[]
 
-const switchLanguage = async (newLocale: string ) => {
+const switchLanguage = async (newLocale: string) => {
   await I18nManager.setLocale(newLocale)
 }
 </script>
@@ -15,10 +14,7 @@ const switchLanguage = async (newLocale: string ) => {
   <div
     class="group relative flex items-center rounded-md text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-within:border-ring focus-within:ring-ring/50 focus-within:ring-[3px]"
   >
-    <Globe
-      class="pointer-events-none absolute left-2.5 size-4 shrink-0"
-      aria-hidden="true"
-    />
+    <Globe class="pointer-events-none absolute left-2.5 size-4 shrink-0" aria-hidden="true" />
     <select
       id="language-select"
       :value="locale"

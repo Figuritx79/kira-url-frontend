@@ -1,7 +1,7 @@
-import type { I18n } from "vue-i18n";
+import type { I18n } from 'vue-i18n'
 
 const localeModules = import.meta.glob('./locales/*.json')
-let _i18n: I18n| null = null;
+let _i18n: I18n | null = null
 const I18nManager = {
   get supportedLocales() {
     return Object.keys(localeModules)
@@ -10,21 +10,22 @@ const I18nManager = {
   },
   init(i18nInstance: I18n) {
     if (!i18nInstance?.global?.locale) {
-      throw new Error("I18nManager.init: invalid i18n instance");
+      throw new Error('I18nManager.init: invalid i18n instance')
     }
-    _i18n = i18nInstance;
+    _i18n = i18nInstance
   },
 
   async setLocale(newLocale: string) {
-    if (!_i18n) throw new Error("I18nManager.setLocale called before init");
+    if (!_i18n) throw new Error('I18nManager.setLocale called before init')
 
-    const current = _i18n.global.locale.value;
+    const current = _i18n.global.locale.value
 
     if (current !== newLocale) {
-      _i18n.global.locale.value = newLocale;
+      _i18n.global.locale.value = newLocale
     }
 
-    document.documentElement.lang = newLocale;
-  },}
+    document.documentElement.lang = newLocale
+  },
+}
 
 export default I18nManager
