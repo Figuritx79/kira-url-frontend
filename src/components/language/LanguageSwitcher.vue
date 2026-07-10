@@ -8,6 +8,10 @@ const suportLocale = I18nManager.supportedLocales.filter(Boolean) as string[]
 const switchLanguage = async (newLocale: string) => {
   await I18nManager.setLocale(newLocale)
 }
+const onLanguageChange = (event: Event) => {
+  const target = event.target as HTMLSelectElement
+  switchLanguage(target.value)
+}
 </script>
 
 <template>
@@ -18,7 +22,7 @@ const switchLanguage = async (newLocale: string) => {
     <select
       id="language-select"
       :value="locale"
-      @change="switchLanguage($event?.target?.value)"
+      @change="onLanguageChange"
       class="appearance-none bg-transparent py-2 pl-8 pr-7 text-sm font-medium text-foreground outline-none transition-colors hover:cursor-pointer focus:ring-0 focus:border-none focus:outline-none"
     >
       <option
