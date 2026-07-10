@@ -1,14 +1,15 @@
 import type { I18n } from 'vue-i18n'
+import i18n from '.'
 
 const localeModules = import.meta.glob('./locales/*.json')
-let _i18n: I18n | null = null
+let _i18n: typeof i18n | null = null
 const I18nManager = {
   get supportedLocales() {
     return Object.keys(localeModules)
       .map((file) => file.match(/\.\/locales\/([^/]+)\.json$/)?.[1])
       .filter(Boolean)
   },
-  init(i18nInstance: I18n) {
+  init(i18nInstance: typeof i18n) {
     if (!i18nInstance?.global?.locale) {
       throw new Error('I18nManager.init: invalid i18n instance')
     }
